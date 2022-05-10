@@ -3,18 +3,19 @@ package com.kashonkov.buildsrc
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object Versions {
-    val coreVersion = "1.7.0"
-    val lifecycleVersion = "2.4.1"
-    val materialVersion = "1.4.0"
-    val junitVersion = "4.13.2"
-    val junitExtVersion = "1.1.3"
-    val espressoVersion = "3.4.0"
-    val constraintLayoutVersion = "2.1.3"
-    val appcompatVersion = "2.4.1"
-    val retrofitVersion = "2.9.0"
-    val retrofitGsonVersion = "2.5.0"
-    val retrofitLoggingVersion = "4.9.0"
-    val hiltVersion = "2.41"
+    const val coreVersion = "1.7.0"
+    const val lifecycleVersion = "2.4.1"
+    const val materialVersion = "1.4.0"
+    const val junitVersion = "4.13.2"
+    const val junitExtVersion = "1.1.3"
+    const val espressoVersion = "3.4.0"
+    const val constraintLayoutVersion = "2.1.3"
+    const val appcompatVersion = "1.4.1"
+    const val retrofitVersion = "2.9.0"
+    const val retrofitGsonVersion = "2.5.0"
+    const val retrofitLoggingVersion = "4.9.0"
+    const val hiltVersion = "2.41"
+    const val cronetVersion = "16.0.0"
 }
 
 
@@ -81,3 +82,6 @@ fun DependencyHandler.hilt() {
     kapt("com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}")
 }
 
+fun DependencyHandler.cronet() {
+    implementation("com.google.android.gms:play-services-cronet:${Versions.cronetVersion}")
+}

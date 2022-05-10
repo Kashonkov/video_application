@@ -3,6 +3,7 @@ import com.kashonkov.buildsrc.*
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
 }
 
 android {
@@ -16,6 +17,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -35,10 +40,11 @@ android {
 
 dependencies {
     core()
-    appCompat()
+//    appCompat()
     design()
     lifecycle()
     retrofit()
     tests()
     hilt()
+    cronet()
 }
